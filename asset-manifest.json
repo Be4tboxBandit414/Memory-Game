@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Be4tboxBandit414/Memory-Game/static/css/main.8f628d9a.chunk.css",
-    "main.js": "/Be4tboxBandit414/Memory-Game/static/js/main.b6c4e486.chunk.js",
-    "main.js.map": "/Be4tboxBandit414/Memory-Game/static/js/main.b6c4e486.chunk.js.map",
-    "runtime~main.js": "/Be4tboxBandit414/Memory-Game/static/js/runtime~main.e847f355.js",
-    "runtime~main.js.map": "/Be4tboxBandit414/Memory-Game/static/js/runtime~main.e847f355.js.map",
-    "static/js/2.e7192084.chunk.js": "/Be4tboxBandit414/Memory-Game/static/js/2.e7192084.chunk.js",
-    "static/js/2.e7192084.chunk.js.map": "/Be4tboxBandit414/Memory-Game/static/js/2.e7192084.chunk.js.map",
-    "index.html": "/Be4tboxBandit414/Memory-Game/index.html",
-    "precache-manifest.aac82a9be9d832f35e3468e364f30150.js": "/Be4tboxBandit414/Memory-Game/precache-manifest.aac82a9be9d832f35e3468e364f30150.js",
-    "service-worker.js": "/Be4tboxBandit414/Memory-Game/service-worker.js",
-    "static/css/main.8f628d9a.chunk.css.map": "/Be4tboxBandit414/Memory-Game/static/css/main.8f628d9a.chunk.css.map"
+    "main.css": "/Memory-Game/static/css/main.8f628d9a.chunk.css",
+    "main.js": "/Memory-Game/static/js/main.b2cba805.chunk.js",
+    "main.js.map": "/Memory-Game/static/js/main.b2cba805.chunk.js.map",
+    "runtime~main.js": "/Memory-Game/static/js/runtime~main.81d8dd5c.js",
+    "runtime~main.js.map": "/Memory-Game/static/js/runtime~main.81d8dd5c.js.map",
+    "static/js/2.e7192084.chunk.js": "/Memory-Game/static/js/2.e7192084.chunk.js",
+    "static/js/2.e7192084.chunk.js.map": "/Memory-Game/static/js/2.e7192084.chunk.js.map",
+    "index.html": "/Memory-Game/index.html",
+    "precache-manifest.3a972f2f77343cb2f14299b1933bf435.js": "/Memory-Game/precache-manifest.3a972f2f77343cb2f14299b1933bf435.js",
+    "service-worker.js": "/Memory-Game/service-worker.js",
+    "static/css/main.8f628d9a.chunk.css.map": "/Memory-Game/static/css/main.8f628d9a.chunk.css.map"
   }
 }
