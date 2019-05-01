@@ -2,7 +2,7 @@
   "name": "card-match",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Be4tboxBandit414/Memory-Game",
+  "homepage": "https://be4tboxbandit414.github.io/Memory-Game/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
