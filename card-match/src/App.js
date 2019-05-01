@@ -5,6 +5,23 @@ import GameOver from "./components/card/GameOver";
 
 import "./styles/main.css";
 
+/* 
+Stanley N: Using PureComponent since not needing the full extent of component and is the fastest component we can write.
+
+state of the application consists of the following: isFlipped, shuffledCard, clickCount, prevSelectedCard, prevCardId, and clickDisabled
+
+isFlipped: Array of 24 with false to begin
+
+shuffledCard: Shuffles the values and sorts them
+
+clickCount: Click number indicator that resets to 1 after the second card is clicked in handleClick()
+
+prevSelectedCard: Previously selected card initiated at -1 for safety since the numbers go from 1 to 12
+
+prevCardId: Previous Card ID initiated at -1 for safety
+
+clickDisabled: Initally set to false to allow user to click. If state is changed to true then the cards cannot be clicked on.
+*/
 class App extends PureComponent {
   state = {
     isFlipped: Array(24).fill(false),
@@ -15,8 +32,9 @@ class App extends PureComponent {
     clickDisabled: false
   };
 
+  // Stanley N: Duplicates inital values in array
   static duplicateCard = () => {
-    return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].reduce(
+    return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].reduce(
       (preValue, current, index, array) => {
         return preValue.concat([current, current]);
       },
@@ -24,6 +42,7 @@ class App extends PureComponent {
     );
   };
 
+  // Stanley N: Click handler that grabs the id of card clicked and sets it as previously selected card.
   handleClick = event => {
     event.preventDefault();
     const cardId = event.target.id;
@@ -33,6 +52,7 @@ class App extends PureComponent {
       prevCardId: cardId
     });
 
+    // Stanley N: Checks to see if card clicked is flipped or not.
     if (newFlipps[cardId] === false) {
       newFlipps[cardId] = !newFlipps[cardId];
       this.setState(prevState => ({
@@ -40,6 +60,7 @@ class App extends PureComponent {
         clickCount: this.state.clickCount + 1
       }));
 
+      // Stanley N: Checks also the click count and resets the clickCount state to 1 if second is clicked. Also setting clickDisabled state to true to prevent mulitple clicks after the second click with a setTimeout to allow for animation and resetting clickDisabled to false to allow user to continue.
       if (this.state.clickCount === 2) {
         this.setState({ clickCount: 1 });
         this.setState({ clickDisabled: true });
@@ -57,6 +78,7 @@ class App extends PureComponent {
     }
   };
 
+  // Stanley N: Check for card match by comparing the two cards that are clicked. Flips card if not matched and hides card if matched. Is called in handleClick.
   isCardMatch = (card1, card2, card1Id, card2Id) => {
     if (card1 === card2) {
       const hideCard = this.state.shuffledCard.slice();
@@ -77,6 +99,7 @@ class App extends PureComponent {
     }
   };
 
+  // Stanley N: Restarts the game by resetting the state. Is called in Header component and GameOver component.
   restartGame = () => {
     this.setState({
       isFlipped: Array(24).fill(false),
@@ -87,12 +110,14 @@ class App extends PureComponent {
     });
   };
 
+  // Stanley N: Checks for every card is matched. Is called in the render.
   isGameOver = () => {
     return this.state.isFlipped.every(
       (element, index, array) => element !== false
     );
   };
 
+  // Stanley N: Renders Application with Header Component, GameOver Component, and Card Component. shuffledCard is called to shuffle and randomly give props to each Card Component.
   render() {
     return (
       <div>
