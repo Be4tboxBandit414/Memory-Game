@@ -7,19 +7,12 @@ import "./styles/main.css";
 
 /* 
 Stanley N: Using PureComponent since not needing the full extent of component and is the fastest component we can write.
-
 state of the application consists of the following: isFlipped, shuffledCard, clickCount, prevSelectedCard, prevCardId, and clickDisabled
-
 isFlipped: Array of 24 with false to begin
-
 shuffledCard: Shuffles the values and sorts them
-
 clickCount: Click number indicator that resets to 1 after the second card is clicked in handleClick()
-
 prevSelectedCard: Previously selected card initiated at -1 for safety since the numbers go from 1 to 12
-
 prevCardId: Previous Card ID initiated at -1 for safety
-
 clickDisabled: Initally set to false to allow user to click. If state is changed to true then the cards cannot be clicked on.
 */
 class App extends PureComponent {
