@@ -51,4 +51,4 @@ isCardMatch: Checks for card match by comparing the two cards that are clicked. 
 restartGame: Resets the state to restart the game.
 
 render: Renders Application with Header Component, GameOver Component, and Card Component. shuffledCard is called to shuffle and randomly give props to each Card Component.
->>>>>>> dbf268c27273bbfe4e5c293e0e462576dbaaf80b
+
