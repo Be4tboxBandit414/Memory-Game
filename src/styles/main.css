@@ -82,3 +82,9 @@ body {
 .react-card-back {
   position: absolute !important;
 }
+
+@media screen and (max-width: 650px) {
+  .grid-container {
+    display: block;
+  }
+}
